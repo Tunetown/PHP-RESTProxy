@@ -21,25 +21,12 @@ will call
 You have to specify if the proxy uses HTTPS to access the target host. This is defined with the USE_SSL constant and cannot be 
 changed by the caller.
 
+## Requirements
+- Apache web server
+- PHP >= 7.3 with CURL module installed.
+
 ## Installation
-Just put the index file on your server, which must provide PHP >= 7.3 and CURL installed.
-
-For path support (REST), you also need a .htaccess file which redirects all paths to this file. Put this content in the .htaccess file:
-
-	# Enable rewrite engine and route requests to framework
-	RewriteEngine On
-	
-	RewriteCond %{THE_REQUEST} \ /(.+)\.php
-	RewriteRule ^ /%1 [L,R=301]
-	
-	RewriteCond %{REQUEST_FILENAME} !-l
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	
-	RewriteRule .* index.php [L,QSA]
-	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
-	
-	SSLRequireSSL
+Just put the index.php and .htaccess files on your server into some directory.
 
 ## License:
 
