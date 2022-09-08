@@ -24,7 +24,7 @@ changed by the caller.
 - PHP >= 7.3 with CURL module installed.
 
 ## Options
-The only option is to use HTTPS or HTTP to call the target host. Everything else is controlled by the URI called, see above.
+The only option is to use HTTPS or HTTP to call the target host. Everything else is controlled by the called URI, see above.
 
 ## Installation
 Just put the index.php and .htaccess files on your server into some directory.
