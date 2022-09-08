@@ -1,7 +1,5 @@
 # RESTProxy
 
-(C) Thomas Weber 2021-2022
-
 ## What is this?
 This is a very simple REST proxy, redirecting all incoming requests exactly via CURL to another URL which is also specified in the request path. Supports all HTTP methods, paths etc. The incoming request is passed 1:1 to the server including headers and path, then the response from the server is returned to the caller 1:1.
 
@@ -32,5 +30,5 @@ The only option is to use HTTPS or HTTP to call the target host. Everything else
 Just put the index.php and .htaccess files on your server into some directory.
 
 ## License:
-
+(C) Thomas Weber 2021-2022
 This is licensed under the Gnu Public License (GPL) v3 or later.    
